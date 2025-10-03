@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
   quickExample.addEventListener('click', () => {
     // provide non-spoiler encoded example to try
     const examples = [
-      '../../../var/www/html/flag.txt',
-      '..%2f..%2f..%2fvar%2fwww%2fhtml%2fflag.txt',
-      '%2e%2e%2f%2e%2e%2f%2e%2e%2fvar%2fwww%2fhtml%2fflag.txt'
+      '../../../var/www/html/etss.txt',
+      '..%2f..%2f..%2fvar%2fwww%2fhtml%etss.txtt',
+      '%2e%2e%2f%2e%2e%2f%2e%2e%2fvar%2fwww%2fhtml%etss.txt'
     ];
     input.value = examples[Math.floor(Math.random() * examples.length)];
     showResult('Contoh diisi otomatis — klik View untuk mencoba.', null);
