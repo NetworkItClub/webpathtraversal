@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>L4F — File Viewer</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">L4F</div>
+      <div>
+        <h1>File Viewer — L4F</h1>
+        <p class="tagline">Buka file... atau coba yang sedikit berbahaya.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <form id="viewForm" class="form">
+        <label>
+          Nama file / path
+          <input id="fileInput" name="file" type="text" value="profile.txt" autocomplete="off" />
+        </label>
+
+        <div class="row">
+          <button class="btn" type="submit">View</button>
+          <button class="btn alt" id="tauntBtn" type="button">Taunt</button>
+          <button class="btn ghost" id="quickExample" type="button">Contoh exploit</button>
+        </div>
+      </form>
+
+      <div id="result" class="result" aria-live="polite">
+        Masukkan nama file, lalu klik <strong>View</strong>. Kalau kamu cukup nakal, coba gunakan <code>../</code>.
+      </div>
+    </section>
+
+    <section class="notes">
+      <h3>Petunjuk singkat</h3>
+      <ul>
+        <li>Endpoint: <code>/view?file=...</code></li>
+        <li>Coba berbagai kombinasi <code>../</code>, URL-encoding (<code>%2e%2e%2f</code>), atau double-encoding.</li>
+        <li>Flag ada di <code>../../../var/www/html/flag.txt</code> (di environment challenge).</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>CTF · L4F — Directory Traversal</small>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/view", "destination": "/api/view" }
+  ],
+  "cleanUrls": true
+}
